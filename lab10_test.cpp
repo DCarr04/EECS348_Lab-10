@@ -22,9 +22,10 @@ int main(){
             cout << dbl[i] << endl;
             cout << n - (i + 1) << endl;
             tensPower = pow(10, n - (i + 1));
-            dub += dbl[i] * tensPower;
+            dub += ((dbl[i] - '0') * tensPower);
             //cout << pow(dbl[i],  10 * (n - (i + 1))) << endl;
             //dub += pow(dbl[i],  10 * (n - (i + 1)));
+            cout << (dbl[i] - '0') * pow(10, n - (i + 1)) << endl;
             cout << tensPower << endl;
             cout << dub << endl;
         }
