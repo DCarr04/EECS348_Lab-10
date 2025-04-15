@@ -33,7 +33,11 @@ bool isValid(char digit){
 }
 
 int main(){
-    string dbl = "-0000190.8000";
+    string dbl = "0000190.8000.";
+    if(dbl[dbl.size() - 1] == '.'){
+        cout << "This string is invalid" << endl;
+        return 0;
+    }
     double dub;
     int n = 0;
     bool afterDecimal = false;
@@ -41,8 +45,11 @@ int main(){
     double tensPower;
     if(dbl[0] == '-'){
         makeNegative = true;
+        dbl.erase(0, 1);
+    }else if(dbl[0] == '+'){
+        dbl.erase(0, 1);
     }
-    dbl.erase(0, 1);
+    
     while(dbl[n] != '.'){
         n++;
     }
