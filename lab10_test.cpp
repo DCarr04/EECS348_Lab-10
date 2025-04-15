@@ -33,11 +33,11 @@ bool isValid(char digit){
 }
 
 int main(){
-    string dbl = "0000190.8000.";
-    if(dbl[dbl.size() - 1] == '.'){
+    string dbl = "0000190..8000";
+    /*if(dbl[dbl.size() - 1] == '.'){
         cout << "This string is invalid" << endl;
         return 0;
-    }
+    }*/
     double dub;
     int n = 0;
     bool afterDecimal = false;
@@ -56,7 +56,7 @@ int main(){
     cout << n << endl;
     cout << dub << endl;
     for(int i = 0; i < dbl.size(); i++){
-        if (isValid(dbl[i]) != true){
+        if (isValid(dbl[i]) != true || (dbl[i] == '.') && afterDecimal == true){
             cout << "This string is invalid" << endl;
             return 0;
         }
