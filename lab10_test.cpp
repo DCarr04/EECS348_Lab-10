@@ -4,8 +4,36 @@
 #include <cmath>
 using namespace std;
 
+bool isValid(char digit){
+    if(digit == '0'){
+        return true;
+    }else if(digit == '1'){
+        return true;
+    }else if(digit == '2'){
+        return true;
+    }else if(digit == '3'){
+        return true;
+    }else if(digit == '4'){
+        return true;
+    }else if(digit == '5'){
+        return true;
+    }else if(digit == '6'){
+        return true;
+    }else if(digit == '7'){
+        return true;
+    }else if(digit == '8'){
+        return true;
+    }else if(digit == '9'){
+        return true;
+    }else if(digit == '.'){
+        return true;
+    }
+
+    return false;
+}
+
 int main(){
-    string dbl = "-0000190.8";
+    string dbl = "-0000190.8000";
     double dub;
     int n = 0;
     bool afterDecimal = false;
@@ -21,6 +49,10 @@ int main(){
     cout << n << endl;
     cout << dub << endl;
     for(int i = 0; i < dbl.size(); i++){
+        if (isValid(dbl[i]) != true){
+            cout << "This string is invalid" << endl;
+            return 0;
+        }
         if(dbl[i] == '.'){
             afterDecimal = true;
         }else{
@@ -43,3 +75,4 @@ int main(){
     }
     cout << dub << endl;
 }
+
