@@ -5,11 +5,16 @@
 using namespace std;
 
 int main(){
-    string dbl = "190.8";
+    string dbl = "-0000190.8";
     double dub;
     int n = 0;
     bool afterDecimal = false;
+    bool makeNegative = false;
     double tensPower;
+    if(dbl[0] == '-'){
+        makeNegative = true;
+    }
+    dbl.erase(0, 1);
     while(dbl[n] != '.'){
         n++;
     }
@@ -33,5 +38,8 @@ int main(){
         
     }
 
+    if(makeNegative == true){
+        dub *= -1.0;
+    }
     cout << dub << endl;
 }
