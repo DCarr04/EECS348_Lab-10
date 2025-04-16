@@ -33,11 +33,7 @@ bool isValid(char digit){
 }
 
 int main(){
-    string dbl = "0000190..8000";
-    /*if(dbl[dbl.size() - 1] == '.'){
-        cout << "This string is invalid" << endl;
-        return 0;
-    }*/
+    string dbl = ".1908000";
     double dub;
     int n = 0;
     bool afterDecimal = false;
