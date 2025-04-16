@@ -37,7 +37,7 @@ double parse_number(const string &expression){
         
     }
 
-    //string dbl = ".1908000";
+    string dbl = expression;
     double dub;
     int n = 0;
     bool afterDecimal = false;
