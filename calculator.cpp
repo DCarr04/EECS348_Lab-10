@@ -33,10 +33,7 @@ bool isValid(char digit){
 }
 
 double parse_number(const string &expression){
-    if (expression[0] == '-'){
-        
-    }
-
+    
     string dbl = expression;
     double dub;
     int n = 0;
@@ -53,26 +50,26 @@ double parse_number(const string &expression){
     while(dbl[n] != '.'){
         n++;
     }
-    cout << n << endl;
-    cout << dub << endl;
+    //cout << n << endl;
+    //cout << dub << endl;
     for(int i = 0; i < dbl.size(); i++){
         if (isValid(dbl[i]) != true || (dbl[i] == '.') && afterDecimal == true){
             cout << "This string is invalid" << endl;
-            return 0;
+            return 0.0;
         }
         if(dbl[i] == '.'){
             afterDecimal = true;
         }else{
-            cout << "------------------" << endl;
-            cout << dbl[i] << endl;
-            cout << n - (i + 1) << endl;
+            //cout << "------------------" << endl;
+            //cout << dbl[i] << endl;
+            //cout << n - (i + 1) << endl;
             if(afterDecimal == true){
                 dub += ((dbl[i] - '0') * pow(10, n - i));
             }else{
                 dub += ((dbl[i] - '0') * pow(10, n - (i + 1)));
             }
             
-            cout << dub << endl;
+            //cout << dub << endl;
         }
         
     }
@@ -80,5 +77,6 @@ double parse_number(const string &expression){
     if(makeNegative == true){
         dub *= -1.0;
     }
-    cout << dub << endl;
+    //cout << dub << endl;
+    return dub;
 }
