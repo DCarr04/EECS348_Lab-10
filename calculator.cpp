@@ -80,3 +80,9 @@ double parse_number(const string &expression){
     //cout << dub << endl;
     return dub;
 }
+
+void add_numbers(double n){
+    double result = n + -123.456;
+    cout << result << endl;
+
+}
