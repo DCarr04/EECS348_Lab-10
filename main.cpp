@@ -15,7 +15,8 @@ int main(int argc, char *argv[]) {
     if (myfile.is_open()){
         while(getline(myfile, line)){
             
-            
+            double parsedNum = parse_number(line);
+            add_numbers(parsedNum);
             
         }
         
