@@ -15,12 +15,12 @@ int main(int argc, char *argv[]) {
     if (myfile.is_open()){
         while(getline(myfile, line)){
             //string* line_ptr = &line;
-            cout << line << endl;
+            //cout << line << endl;
             double parsedNum = parse_number(line);
             if(parsedNum != 0.0033909){
                 add_numbers(parsedNum);
             }
-             cout << 3 + -123.456 << endl;
+             //cout << 3 + -123.456 << endl;
             
         }
         
