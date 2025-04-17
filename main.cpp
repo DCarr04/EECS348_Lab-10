@@ -26,5 +26,5 @@ int main(int argc, char *argv[]) {
 
     }
     myfile.close();
-    cout << 400.20 + -123.456 << endl;
+    //cout << 400.20 + -123.456 << endl;
 }
