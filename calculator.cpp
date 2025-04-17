@@ -47,15 +47,18 @@ double parse_number(const string &expression){
         dbl.erase(0, 1);
     }
     
-    while(dbl[n] != '.'){
-        n++;
+    int decimalIndex = dbl.find('.');
+    if(decimalIndex != string::npos){
+        n = decimalIndex;
+    }else{
+        n = dbl.size();
     }
     //cout << n << endl;
     //cout << dub << endl;
     for(int i = 0; i < dbl.size(); i++){
         if (isValid(dbl[i]) != true || (dbl[i] == '.') && afterDecimal == true){
             cout << "This string is invalid" << endl;
-            return 0.0;
+            return 0.0033909;
         }
         if(dbl[i] == '.'){
             afterDecimal = true;
@@ -83,6 +86,6 @@ double parse_number(const string &expression){
 
 void add_numbers(double n){
     double result = n + -123.456;
-    cout << result << endl;
+    cout << n + -123.456 << endl;
 
 }

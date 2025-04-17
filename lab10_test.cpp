@@ -33,7 +33,7 @@ bool isValid(char digit){
 }
 
 int main(){
-    string dbl = ".1908000";
+    string dbl = "+.3";
     double dub;
     int n = 0;
     bool afterDecimal = false;
@@ -45,10 +45,16 @@ int main(){
     }else if(dbl[0] == '+'){
         dbl.erase(0, 1);
     }
-    
-    while(dbl[n] != '.'){
-        n++;
+    int decimalIndex = dbl.find('.');
+    if(decimalIndex != string::npos){
+        n = decimalIndex;
+    }else{
+        n = dbl.size();
     }
+    /*while(dbl[n] != '.'){
+        n++;
+    }*/
+    
     cout << n << endl;
     cout << dub << endl;
     for(int i = 0; i < dbl.size(); i++){

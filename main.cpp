@@ -14,9 +14,13 @@ int main(int argc, char *argv[]) {
     ifstream myfile (file);
     if (myfile.is_open()){
         while(getline(myfile, line)){
-            
+            //string* line_ptr = &line;
+            cout << line << endl;
             double parsedNum = parse_number(line);
-            add_numbers(parsedNum);
+            if(parsedNum != 0.0033909){
+                add_numbers(parsedNum);
+            }
+             cout << 3 + -123.456 << endl;
             
         }
         
