@@ -20,11 +20,11 @@ int main(int argc, char *argv[]) {
             if(parsedNum != 0.0033909){
                 add_numbers(parsedNum);
             }
-             //cout << 3 + -123.456 << endl;
             
         }
         
 
     }
     myfile.close();
+    cout << 400.20 + -123.456 << endl;
 }
